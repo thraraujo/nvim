@@ -1,2 +1,4 @@
 .DS_Store
+coc-settings.json
+snips/
 autoload/
