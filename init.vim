@@ -4,7 +4,8 @@
 " https://www.youtube.com/watch?v=JWReY93Vl6g&list=WL&index=20
 " https://github.com/ChristianChiarulli/nvim
 "
-" Global definitions """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Global definitions =============================================
+
 syntax on            " Syntax highlight
 set number           " Numbered Lines 
 set relativenumber   " Relatively numbered lines
@@ -39,27 +40,22 @@ filetype indent on   " Load the indent file for the file type, if any
 
 call plug#begin()
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
-Plug 'https://github.com/preservim/nerdtree' " NerdTree
-Plug 'https://github.com/preservim/tagbar' " Tagbar for code navigation
+Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/dracula/vim' " Dracula theme
 Plug 'https://github.com/neoclide/coc.nvim' " Conquerors of Completion. 
 Plug 'honza/vim-snippets' " Snippets
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot' " Language plugin
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } " Markdown
 call plug#end()
 
 colorscheme dracula
 
-nmap <C-j> 5j
-nmap <C-k> 5k
-nmap <C-l> 5l
-nmap <C-h> 5h
+" AirLine ============================================================
 
-nmap <F8> :TagbarToggle<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-
-let g:NERDTreeDirArrowExpandable = '+'
-let g:NERDTreeDirArrowCollapsible = '-'
+let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='jellybeans'
+let g:airline_theme='dracula'
 
 " Conquerors of completion definitions ================================
 
