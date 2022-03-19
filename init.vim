@@ -41,7 +41,6 @@ filetype indent on   " Load the indent file for the file type, if any
 call plug#begin()
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'vim-airline/vim-airline-themes' " Status bar themes
-Plug 'vim-airline/vim-airline-themes'
 Plug 'https://github.com/dracula/vim' " Dracula theme
 Plug 'https://github.com/neoclide/coc.nvim' " Conquerors of Completion. 
 Plug 'honza/vim-snippets' " Snippets
